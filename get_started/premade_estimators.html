@@ -3,14 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Premade Estimators</title>
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/highlight.js.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/needsharebutton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/main.css">
 </head>
 <body>
 <!-- Header start -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TensorFlow</a>
+    <a class="navbar-brand" href="//tensorflow.juejin.im">TensorFlow</a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Menu"
             onclick="$('.collapse').toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -19,15 +21,13 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <!-- TODO: Search function-->
-        <!--<form class="form-inline my-2 my-lg-0">-->
-            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-        <!--</form>-->
+        <form class="form-inline my-2 my-lg-0 my-md-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        </form>
     </div>
 </nav>
 <script>
-    var head = [{'link': '//xitu.github.io/tensorflow-docs-web/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'name': 'About TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'name': '开始', 'selected': 1}, {'link': '//xitu.github.io/tensorflow-docs-web/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/community/index.html', 'name': 'Community', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
+    var head = [{'link': '//tensorflow.juejin.im/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//tensorflow.juejin.im/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//tensorflow.juejin.im/about/index.html', 'name': '关于 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/get_started/index.html', 'name': '开始', 'selected': 1}, {'link': '//tensorflow.juejin.im/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//tensorflow.juejin.im/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//tensorflow.juejin.im/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//tensorflow.juejin.im/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//tensorflow.juejin.im/community/index.html', 'name': '社区', 'selected': 0}, {'link': '//tensorflow.juejin.im/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,22 +51,22 @@
     </div>
 </nav>
 <script>
-    var nav = [{'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'title': '开始'}, {'type': 'parent', 'title': ' Beginners', 'sub_class': [{'link': '//xitu.github.io/tensorflow-docs-web/get_started/eager.html', 'title': '开始使用 Eager Execution'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'parent', 'title': ' Estimators', 'sub_class': [{'link': '//xitu.github.io/tensorflow-docs-web/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/checkpoints.html', 'title': '检查点'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/feature_columns.html', 'title': '特征列'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/datasets_quickstart.html', 'title': '数据集：快速了解'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/custom_estimators.html', 'title': '创建定制化 Estimator'}]
+    var nav = [{'type': 'child', 'link': '//tensorflow.juejin.im/get_started/index.html', 'title': '开始'}, {'type': 'parent', 'title': ' Beginners', 'sub_class': [{'link': '//tensorflow.juejin.im/get_started/eager.html', 'title': '开始使用 Eager Execution'}, {'link': '//tensorflow.juejin.im/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//tensorflow.juejin.im/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'parent', 'title': ' Estimators', 'sub_class': [{'link': '//tensorflow.juejin.im/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//tensorflow.juejin.im/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/checkpoints.html', 'title': '检查点'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/feature_columns.html', 'title': '特征列'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/datasets_quickstart.html', 'title': '数据集：快速了解'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/custom_estimators.html', 'title': '创建定制化 Estimator'}]
 </script>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h1>Premade Estimators</h1>
+        <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <h1 id="toc-0">Premade Estimators</h1>
 <p>该文档将介绍 TensorFlow 的编程环境，并会向你展示如何使用 TensorFlow 解决 Iris 分类问题。</p>
-<h2>前置要求</h2>
+<h2 id="toc-1">前置要求</h2>
 <p>你需要先做如下几件事，才能够使用本文档的样例代码：</p>
 <ul>
-<li><a href="//xitu.github.io/tensorflow-docs-web/install/index.html">安装 TensorFlow</a></li>
+<li><a href="//tensorflow.juejin.im/install/index.html">安装 TensorFlow</a></li>
 <li>如果你在 virtualenv 或者 Anaconda 上安装了 TensorFlow，启动你的 TensorFlow 环境。</li>
 <li><p>通过以下命令安装或升级 pandas：</p>
 <pre><code>  pip install pandas
 </code></pre>
 </li>
 </ul>
-<h2>获取样例代码</h2>
+<h2 id="toc-2">获取样例代码</h2>
 <p>通过以下几步来获得我们将要使用的样例代码：</p>
 <ol>
 <li><p>通过键入以下命令从 GitHub 下载 TensorFlow Models 仓库：</p>
@@ -83,7 +83,7 @@
 这个程序使用<br>
 <a href="https://github.com/tensorflow/models/blob/master/samples/core/get_started/iris_data.py"><code>iris_data.py</code></a><br>
 来获取训练数据。</p>
-<h3>运行程序</h3>
+<h3 id="toc-3">运行程序</h3>
 <p>运行 TensorFlow 的程序和运行其他的 Python 程序方法一样。例如</p>
 <pre><code class="lang-bsh">python premade_estimator.py
 </code></pre>
@@ -101,16 +101,16 @@ Prediction is &quot;Virginica&quot; (97.9%), expected &quot;Virginica&quot;
 <li>你使用的是正确版本的 TensorFlow 吗？</li>
 <li>你启动安装了 TensorFlow 的环境了吗？（这条仅会出现在一些特定的安装方法中）</li>
 </ul>
-<h2>程序栈</h2>
+<h2 id="toc-4">程序栈</h2>
 <p>在深入程序细节之前，让我们先了解一下程序的环境。如下所示，TensorFlow 提供了一个含有很多 API 层的程序栈：</p>
 <div style="width:100%; margin:auto; margin-bottom:10px; margin-top:20px;">
 <img style="width:100%" src="https://www.tensorflow.org/images/tensorflow_programming_environment.png">
 </div><p>我们强烈建议使用如下 API 编写 TensorFlow 程序：</p>
 <ul>
-<li><a href="//xitu.github.io/tensorflow-docs-web/programmers_guide/estimators.html">评估器</a></li>
-<li><a href="//xitu.github.io/tensorflow-docs-web/./get_started/datasets_quickstart.html">数据集：快速了解</a></li>
+<li><a href="//tensorflow.juejin.im/programmers_guide/estimators.html">评估器</a></li>
+<li><a href="//tensorflow.juejin.im/get_started/datasets_quickstart.html">数据集：快速了解</a></li>
 </ul>
-<h2>对　irises　分类：概览</h2>
+<h2 id="toc-5">对　irises　分类：概览</h2>
 <p>本文档中的这个样例程序搭建并测试了一个模型，根据花的<a href="https://en.wikipedia.org/wiki/Sepal">萼片</a>和<a href="https://en.wikipedia.org/wiki/Petal">花瓣</a>将 Iris 花分成不同种类。</p>
 <div style="width:80%; margin:auto; margin-bottom:10px; margin-top:20px;">
 <img style="width:100%"
@@ -124,7 +124,7 @@ Prediction is &quot;Virginica&quot; (97.9%), expected &quot;Virginica&quot;
 and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris virginica</em></a><br>
 (by <a href="https://www.flickr.com/photos/33397993@N05">Frank Mayfield</a>, CC BY-SA<br>
 2.0).</strong></p>
-<h3>数据集</h3>
+<h3 id="toc-6">数据集</h3>
 <p>Iris 数据集包含四个特征和一个<a href="https://developers.google.com/machine-learning/glossary/#label">标签</a>。四个特征定义了 Iris 花的植物特征：</p>
 <ul>
 <li>花萼长度</li>
@@ -174,7 +174,7 @@ and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris vir
 </tr>
 </tbody>
 </table></div>
-<h3>算法</h3>
+<h3 id="toc-7">算法</h3>
 <p>程序训练了一个深度神经网络分类模型，有着如下的拓扑结构：</p>
 <ul>
 <li>2 个隐藏层。</li>
@@ -185,7 +185,7 @@ and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris vir
 <img style="width:100%"
   alt="A diagram of the network architecture: Inputs, 2 hidden layers, and outputs"
   src="https://www.tensorflow.org/images/custom_estimators/full_network.png">
-</div><h3>接口</h3>
+</div><h3 id="toc-8">接口</h3>
 <p>在未标记的样例上运行一个训练好的模型，会产生三个预测，分别是该花朵分别属于三种 Iris 类别的概率。这三个预测值的和为 1.0。例如，对一个未标记的样例的预测可能如下所示：</p>
 <ul>
 <li>Iris Setosa 的可能性为 0.03</li>
@@ -193,8 +193,8 @@ and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris vir
 <li>Iris Virginica 的可能性为 0.02</li>
 </ul>
 <p>这个预测意味着所给的未标记样例有 95% 的概率为 Iris Versicolor 品种。</p>
-<h2>使用 Estimators 编程的概览</h2>
-<p><a href="//xitu.github.io/tensorflow-docs-web/programmers_guide/estimators.html">评估器</a></p>
+<h2 id="toc-9">使用 Estimators 编程的概览</h2>
+<p><a href="//tensorflow.juejin.im/programmers_guide/estimators.html">评估器</a></p>
 <p><a href="https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator"><code>tf.estimator.Estimator</code></a></p>
 <p>要写出一个基于预制的 Estimator 的 TensorFlow 程序，你可以进行如下任务：</p>
 <ul>
@@ -204,7 +204,7 @@ and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris vir
 <li>在 Estimator 对象上调用一个或多个方法，传入合适的输入函数来作为数据源。</li>
 </ul>
 <p>让我们看看这些任务是如何实现 Iris 分类的。</p>
-<h2>创建输入函数</h2>
+<h2 id="toc-10">创建输入函数</h2>
 <p>你必须创建一个可以为训练，评估和预测提供数据提供支持的输入函数。</p>
 <p><a href="https://www.tensorflow.org/api_docs/python/tf/data/Dataset"><code>tf.data.Dataset</code></a></p>
 <ul>
@@ -246,7 +246,7 @@ and <a href="https://www.flickr.com/photos/33397993@N05/3352169862"><em>Iris vir
     # 打乱，重复并将样例分批次
     return dataset.shuffle(1000).repeat().batch(batch_size)
 </code></pre>
-<h2>定义特征列</h2>
+<h2 id="toc-11">定义特征列</h2>
 <p><a href="https://www.tensorflow.org/api_docs/python/tf/feature_column"><code>tf.feature_column</code></a></p>
 <p>对于 Iris 来说，4 个原始的特征为数值，所以我们将会建立一个特征列的列表来告诉 Estimator 模型，将四个特征分别表示为 32 位的浮点数值。因此，用于建立特征列的代码为：</p>
 <pre><code class="lang-python"># Feature columns describe how to use the input.
@@ -254,9 +254,9 @@ my_feature_columns = []
 for key in train_x.keys():
     my_feature_columns.append(tf.feature_column.numeric_column(key=key))
 </code></pre>
-<p><a href="//xitu.github.io/tensorflow-docs-web/./get_started/feature_columns.html">特征列</a></p>
+<p><a href="//tensorflow.juejin.im/get_started/feature_columns.html">特征列</a></p>
 <p>如今我们有了如何让模型表示原始特征的定义，我们可以开始搭建 Estimator 了。</p>
-<h2>实例化一个 Estimator</h2>
+<h2 id="toc-12">实例化一个 Estimator</h2>
 <p>Iris 问题是一个经典的分类问题。幸运的是，TensorFlow 提供了一些预制的 Estimator 分类器，包含：</p>
 <ul>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/estimator/DNNClassifier"><code>tf.estimator.DNNClassifier</code></a></li>
@@ -272,14 +272,14 @@ classifier = tf.estimator.DNNClassifier(
     # 模型必须在 3 个类别中作出选择
     n_classes=3)
 </code></pre>
-<h2>训练，评估和预测</h2>
+<h2 id="toc-13">训练，评估和预测</h2>
 <p>现在我们有了一个 Estimator 对象，我们可以调用方法来做如下事情：</p>
 <ul>
 <li>训练模型</li>
 <li>评估训练好的模型</li>
 <li>使用训练好的模型进行预测</li>
 </ul>
-<h3>训练模型</h3>
+<h3 id="toc-14">训练模型</h3>
 <p>像如下一样调用 Estimator 的 <code>train</code> 方法来训练模型：</p>
 <pre><code class="lang-python"># 训练模型
 classifier.train(
@@ -287,7 +287,7 @@ classifier.train(
     steps=args.train_steps)
 </code></pre>
 <p>这里我们将 <code>input_fn</code> 的调用包含在一个 <a href="https://docs.python.org/3/tutorial/controlflow.html"><code>lambda</code></a> 中来在提供一个无参数的输入函数时获取 Estimator 所需的参数。<code>steps</code> 参数告诉方法要在一定数量的训练次数后停止训练。</p>
-<h3>评估训练好的模型</h3>
+<h3 id="toc-15">评估训练好的模型</h3>
 <p>如今模型已被训练好，我们可以获得一些它的表现数据了。下面的代码片段评估了该模型在测试集上的准确率：</p>
 <pre><code class="lang-python"># 评估该模型
 eval_result = classifier.evaluate(
@@ -299,7 +299,7 @@ print(&#39;\nTest set accuracy: {accuracy:0.3f}\n&#39;.format(**eval_result))
 <p>运行这段代码会产生如下的输出（或者类似的东西）：</p>
 <pre><code class="lang-none">Test set accuracy: 0.967
 </code></pre>
-<h3>通过训练好的模型进行预测</h3>
+<h3 id="toc-16">通过训练好的模型进行预测</h3>
 <p>我们如今有了一个训练好的模型，而且能拥有不错的评估结果。我们现在可以使用训练好的模型，基于一些未标记的样例来预测 Iris 花朵的类型了。与训练和评估相同，我们进行预测时只需进行一次函数调用：</p>
 <pre><code class="lang-python"># 通过模型进行预测
 expected = [&#39;Setosa&#39;, &#39;Versicolor&#39;, &#39;Virginica&#39;]
@@ -332,16 +332,34 @@ Prediction is &quot;Versicolor&quot; (99.8%), expected &quot;Versicolor&quot;
 
 Prediction is &quot;Virginica&quot; (97.9%), expected &quot;Virginica&quot;
 </code></pre>
-<h2>总结</h2>
+<h2 id="toc-17">总结</h2>
 <p>预制的 Estimator 是一个很有效的快速创建标准模型的方法。</p>
 <p>现在如果你已经开始编写 TensorFlow 程序了，那么注意关注如下的资料：</p>
 <ul>
-<li><a href="//xitu.github.io/tensorflow-docs-web/./get_started/checkpoints.html">检查点</a></li>
-<li><a href="//xitu.github.io/tensorflow-docs-web/./get_started/datasets_quickstart.html">数据集：快速了解</a></li>
-<li><a href="//xitu.github.io/tensorflow-docs-web/./get_started/custom_estimators.html">创建定制化 Estimator</a></li>
+<li><a href="//tensorflow.juejin.im/get_started/checkpoints.html">检查点</a></li>
+<li><a href="//tensorflow.juejin.im/get_started/datasets_quickstart.html">数据集：快速了解</a></li>
+<li><a href="//tensorflow.juejin.im/get_started/custom_estimators.html">创建定制化 Estimator</a></li>
 </ul>
 
         </main>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul id="table-of-content">
+<li><a href="#toc-0">Premade Estimators</a><ul>
+<li><a href="#toc-1">前置要求</a></li>
+<li><a href="#toc-2">获取样例代码</a></li>
+<li><a href="#toc-4">程序栈</a></li>
+<li><a href="#toc-5">对　irises　分类：概览</a></li>
+<li><a href="#toc-9">使用 Estimators 编程的概览</a></li>
+<li><a href="#toc-10">创建输入函数</a></li>
+<li><a href="#toc-11">定义特征列</a></li>
+<li><a href="#toc-12">实例化一个 Estimator</a></li>
+<li><a href="#toc-13">训练，评估和预测</a></li>
+<li><a href="#toc-17">总结</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
     </div>
 </div>
 <!-- Content end-->
@@ -356,7 +374,7 @@ Prediction is &quot;Virginica&quot; (97.9%), expected &quot;Virginica&quot;
                     src="https://www.tensorflow.org/_static/b1fb9a8564/images/tensorflow/lockup.png" height="20"/></a>
             <a href="https://github.com/xitu/tensorflow-docs"><img
                     src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" height="20"></a>
-            <a href="https://juejin.im"><img src="//xitu.github.io/tensorflow-docs-web/assets/imgs/logo_app_white.png" height="20"/></a>
+            <a href="https://juejin.im"><img src="//tensorflow.juejin.im/assets/imgs/logo_app_white.png" height="20"/></a>
         </div>
     </div>
 </footer>
@@ -364,8 +382,13 @@ Prediction is &quot;Virginica&quot; (97.9%), expected &quot;Virginica&quot;
     var contributors = [{'CACppuccino': 'https://avatars3.githubusercontent.com/u/25502039?v=4'}, {'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
 </script>
 <!-- Footer end -->
+<div id="share-button" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Wechat,Twitter,RenRen,Facebook,GooglePlus" data-share-title="Premade Estimators">
+    <img src="//tensorflow.juejin.im/assets/imgs/share.png"/>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js" type="text/javascript"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" type="text/javascript"></script>
-<script src="//xitu.github.io/tensorflow-docs-web/assets/js/main.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/jquery.slim.min.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="//tensorflow.juejin.im/assets/js/needsharebutton.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/main.js" type="text/javascript"></script>
 </html>

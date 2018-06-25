@@ -3,14 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>检查点</title>
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/highlight.js.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/needsharebutton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/main.css">
 </head>
 <body>
 <!-- Header start -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TensorFlow</a>
+    <a class="navbar-brand" href="//tensorflow.juejin.im">TensorFlow</a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Menu"
             onclick="$('.collapse').toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -19,15 +21,13 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <!-- TODO: Search function-->
-        <!--<form class="form-inline my-2 my-lg-0">-->
-            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-        <!--</form>-->
+        <form class="form-inline my-2 my-lg-0 my-md-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        </form>
     </div>
 </nav>
 <script>
-    var head = [{'link': '//xitu.github.io/tensorflow-docs-web/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'name': 'About TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'name': '开始', 'selected': 1}, {'link': '//xitu.github.io/tensorflow-docs-web/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/community/index.html', 'name': 'Community', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
+    var head = [{'link': '//tensorflow.juejin.im/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//tensorflow.juejin.im/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//tensorflow.juejin.im/about/index.html', 'name': '关于 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/get_started/index.html', 'name': '开始', 'selected': 1}, {'link': '//tensorflow.juejin.im/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//tensorflow.juejin.im/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//tensorflow.juejin.im/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//tensorflow.juejin.im/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//tensorflow.juejin.im/community/index.html', 'name': '社区', 'selected': 0}, {'link': '//tensorflow.juejin.im/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,23 +51,23 @@
     </div>
 </nav>
 <script>
-    var nav = [{'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'title': '开始'}, {'type': 'parent', 'title': ' Beginners', 'sub_class': [{'link': '//xitu.github.io/tensorflow-docs-web/get_started/eager.html', 'title': '开始使用 Eager Execution'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'parent', 'title': ' Estimators', 'sub_class': [{'link': '//xitu.github.io/tensorflow-docs-web/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/checkpoints.html', 'title': '检查点'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/feature_columns.html', 'title': '特征列'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/datasets_quickstart.html', 'title': '数据集：快速了解'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/get_started/custom_estimators.html', 'title': '创建定制化 Estimator'}]
+    var nav = [{'type': 'child', 'link': '//tensorflow.juejin.im/get_started/index.html', 'title': '开始'}, {'type': 'parent', 'title': ' Beginners', 'sub_class': [{'link': '//tensorflow.juejin.im/get_started/eager.html', 'title': '开始使用 Eager Execution'}, {'link': '//tensorflow.juejin.im/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//tensorflow.juejin.im/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'parent', 'title': ' Estimators', 'sub_class': [{'link': '//tensorflow.juejin.im/get_started/get_started_for_beginners.html', 'title': 'Graph Execution 入门'}, {'link': '//tensorflow.juejin.im/get_started/premade_estimators.html', 'title': 'Premade Estimators'}]}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/checkpoints.html', 'title': '检查点'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/feature_columns.html', 'title': '特征列'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/datasets_quickstart.html', 'title': '数据集：快速了解'}, {'type': 'child', 'link': '//tensorflow.juejin.im/get_started/custom_estimators.html', 'title': '创建定制化 Estimator'}]
 </script>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h1>检查点</h1>
+        <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <h1 id="toc-0">检查点</h1>
 <p>本文介绍如何保存和恢复编译有 Estimator 的 TensorFlow 模型。TensorFlow 提供两种模型格式：</p>
 <ul>
 <li>  检查点（checkpoints）：这是一种依赖于创建模型代码的格式。</li>
 <li>  SavedModel：这是一种与创建模型代码无关的格式。</li>
 </ul>
-<p><a href="//xitu.github.io/tensorflow-docs-web/programmers_guide/saved_model.html">保存和恢复</a></p>
-<h2>示例代码</h2>
-<p><a href="//xitu.github.io/tensorflow-docs-web/./get_started/premade_estimators.html">Premade Estimators</a></p>
+<p><a href="//tensorflow.juejin.im/programmers_guide/saved_model.html">保存和恢复</a></p>
+<h2 id="toc-1">示例代码</h2>
+<p><a href="//tensorflow.juejin.im/get_started/premade_estimators.html">Premade Estimators</a></p>
 <pre><code class="lang-shell">git clone https://github.com/tensorflow/models/
 cd models/samples/core/get_started
 </code></pre>
 <p>本文中大部分代码片断都是在 <code>premade_estimator.py</code> 基础上少量修改的版本。</p>
-<h2>保存未训练完的模型</h2>
+<h2 id="toc-2">保存未训练完的模型</h2>
 <p>Estimators 自动将下列内容写到磁盘上：</p>
 <ul>
 <li>  <strong>检查点</strong>：训练过程中生成的不同版本的模型。</li>
@@ -104,7 +104,7 @@ model.ckpt-200.index
 model.ckpt-200.meta
 </code></pre>
 <p>上面的 <code>ls</code> 命令显示，此 Estimator 在第 1 步（训练开始时）和第 200 步（训练结束时）生成了检查点。</p>
-<h3>默认检查点目录</h3>
+<h3 id="toc-3">默认检查点目录</h3>
 <p>如果你在一个 Estimator 构造函数中指定 <code>model_dir</code> 参数，此 Estimator 将检查点文件写到一个临时目录中，此目录由 Python 的 <a href="https://docs.python.org/3/library/tempfile.html#tempfile.mkdtemp">tempfile.mkdtemp</a> 函数指定。比如，下面的 Estimator 构造函数并没有指定 <code>model_dir</code> 参数：</p>
 <pre><code class="lang-python">classifier = tf.estimator.DNNClassifier(
     feature_columns=my_feature_columns,
@@ -116,7 +116,7 @@ print(classifier.model_dir)
 <p><code>tempfile.mkdtemp</code> 函数会为你在操作系统中选择一个安全的临时目录。比如，在 macOS 操作系统中，一个典型的临时目录为：</p>
 <pre><code class="lang-None">/var/folders/0s/5q9kfzfj3gx2knj0vj8p68yc00dhcr/T/tmpYm1Rwa
 </code></pre>
-<h3>检查点的保存频率</h3>
+<h3 id="toc-4">检查点的保存频率</h3>
 <p>默认情况下， Estimator 会在 <code>model_dir</code> 目录中保存 <a href="https://developers.google.com/machine-learning/glossary/#checkpoint">检查点</a>，并且采用如下策略：</p>
 <ul>
 <li>  每隔 10 分钟保存一个检查点（即 600 秒）。</li>
@@ -141,10 +141,10 @@ classifier = tf.estimator.DNNClassifier(
     model_dir=&#39;models/iris&#39;,
     config=my_checkpointing_config)
 </code></pre>
-<h2>恢复你的模型</h2>
+<h2 id="toc-5">恢复你的模型</h2>
 <p>当第一次调用一个 Estimator 的 <code>train</code> 方法时，TensorFlow 会在 <code>model_dir</code> 目录中保存一个检查点。后续每调用一次 Estimator 的 <code>train</code> 、 <code>evaluate</code> 或 <code>predict</code> 方法，都会发生如下的行为：</p>
 <ol>
-<li><a href="//xitu.github.io/tensorflow-docs-web/./get_started/custom_estimators.html">创建定制化 Estimator</a></li>
+<li><a href="//tensorflow.juejin.im/get_started/custom_estimators.html">创建定制化 Estimator</a></li>
 <li>这个 Estimator 从最近的检查点中恢复出数据，用于初始化新模型的权重值。</li>
 </ol>
 <p>换句话说，如下图所示，一旦检查点文件存在，TensorFlow 总会在你调用 <code>train()</code> 、 <code>evaluation()</code> 或 <code>predict()</code> 时重建模型。</p>
@@ -153,7 +153,7 @@ classifier = tf.estimator.DNNClassifier(
 </div>
 <div style="text-align: center">
 后续对 train()、evaluate() 或 predict() 的调用
-</div><h3>避免不好的恢复</h3>
+</div><h3 id="toc-6">避免不好的恢复</h3>
 <p>只有当模型与检查点兼容时，我们才可以从这个检查点中恢复出模型的状态。比如，假设你训练了一个称为 <code>DNNClassifier</code> 的 Estimator，它包含两个隐藏层，每个有 10 个结点：</p>
 <pre><code class="lang-python">classifier = tf.estimator.DNNClassifier(
     feature_columns=feature_columns,
@@ -183,15 +183,27 @@ dnn/hiddenlayer_1/bias/t_0/Adagrad; shape in shape_and_slice spec [10]
 does not match the shape stored in checkpoint: [20]
 </code></pre>
 <p>当你在做实验时训练并比较版本稍有不同的模型时，记得保存创建每个 <code>model_dir</code> 的代码。比如，你可以为每个版本创建一个独立的 git 分支。这种分隔的做法可以保证你的检查点是可恢复的。</p>
-<h2>总结</h2>
+<h2 id="toc-7">总结</h2>
 <p>检查点提供了一种容易的保存和恢复由 Estimator 生成的模型的自动化机制。</p>
-<p><a href="//xitu.github.io/tensorflow-docs-web/programmers_guide/saved_model.html">保存和恢复</a></p>
+<p><a href="//tensorflow.juejin.im/programmers_guide/saved_model.html">保存和恢复</a></p>
 <ul>
 <li>  使用底层 TensorFlow API 来保存和恢复模型。</li>
 <li>  在 SavedModel 模式中导出和导入模型，这是一种语言无关、可恢复、可序列化格式。</li>
 </ul>
 
         </main>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul id="table-of-content">
+<li><a href="#toc-0">检查点</a><ul>
+<li><a href="#toc-1">示例代码</a></li>
+<li><a href="#toc-2">保存未训练完的模型</a></li>
+<li><a href="#toc-5">恢复你的模型</a></li>
+<li><a href="#toc-7">总结</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
     </div>
 </div>
 <!-- Content end-->
@@ -206,7 +218,7 @@ does not match the shape stored in checkpoint: [20]
                     src="https://www.tensorflow.org/_static/b1fb9a8564/images/tensorflow/lockup.png" height="20"/></a>
             <a href="https://github.com/xitu/tensorflow-docs"><img
                     src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" height="20"></a>
-            <a href="https://juejin.im"><img src="//xitu.github.io/tensorflow-docs-web/assets/imgs/logo_app_white.png" height="20"/></a>
+            <a href="https://juejin.im"><img src="//tensorflow.juejin.im/assets/imgs/logo_app_white.png" height="20"/></a>
         </div>
     </div>
 </footer>
@@ -214,8 +226,13 @@ does not match the shape stored in checkpoint: [20]
     var contributors = [{'pkuwwt': 'https://avatars0.githubusercontent.com/u/4813445?v=4'}, {'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
 </script>
 <!-- Footer end -->
+<div id="share-button" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Wechat,Twitter,RenRen,Facebook,GooglePlus" data-share-title="检查点">
+    <img src="//tensorflow.juejin.im/assets/imgs/share.png"/>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js" type="text/javascript"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" type="text/javascript"></script>
-<script src="//xitu.github.io/tensorflow-docs-web/assets/js/main.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/jquery.slim.min.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="//tensorflow.juejin.im/assets/js/needsharebutton.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/main.js" type="text/javascript"></script>
 </html>

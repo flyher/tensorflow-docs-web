@@ -3,14 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Math</title>
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/highlight.js.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/needsharebutton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/main.css">
 </head>
 <body>
 <!-- Header start -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TensorFlow</a>
+    <a class="navbar-brand" href="//tensorflow.juejin.im">TensorFlow</a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Menu"
             onclick="$('.collapse').toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -19,15 +21,13 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <!-- TODO: Search function-->
-        <!--<form class="form-inline my-2 my-lg-0">-->
-            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-        <!--</form>-->
+        <form class="form-inline my-2 my-lg-0 my-md-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        </form>
     </div>
 </nav>
 <script>
-    var head = [{'link': '//xitu.github.io/tensorflow-docs-web/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'name': 'About TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/community/index.html', 'name': 'Community', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
+    var head = [{'link': '//tensorflow.juejin.im/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//tensorflow.juejin.im/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//tensorflow.juejin.im/about/index.html', 'name': '关于 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//tensorflow.juejin.im/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//tensorflow.juejin.im/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//tensorflow.juejin.im/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//tensorflow.juejin.im/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//tensorflow.juejin.im/community/index.html', 'name': '社区', 'selected': 0}, {'link': '//tensorflow.juejin.im/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,13 +46,13 @@
 <div class="container-fluid">
     <div class="row">
         
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h1>Math</h1>
+        <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <h1 id="toc-0">Math</h1>
 <p><a href="https://www.tensorflow.org/api_docs/python/tf/convert_to_tensor"><code>tf.convert_to_tensor</code></a></p>
 <p>[TOC]</p>
 <p>Note: Elementwise binary operations in TensorFlow follow <a href="http://docs.scipy.org/doc/numpy/user/basics.broadcasting.html">numpy-style<br>
 broadcasting</a>.</p>
-<h2>Arithmetic Operators</h2>
+<h2 id="toc-1">Arithmetic Operators</h2>
 <p>TensorFlow provides several operations that you can use to add basic arithmetic<br>
 operators to your graph.</p>
 <ul>
@@ -72,7 +72,7 @@ operators to your graph.</p>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/mod"><code>tf.mod</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/cross"><code>tf.cross</code></a></li>
 </ul>
-<h2>Basic Math Functions</h2>
+<h2 id="toc-2">Basic Math Functions</h2>
 <p>TensorFlow provides several operations that you can use to add basic<br>
 mathematical functions to your graph.</p>
 <ul>
@@ -118,7 +118,7 @@ mathematical functions to your graph.</p>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/betainc"><code>tf.betainc</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/rint"><code>tf.rint</code></a></li>
 </ul>
-<h2>Matrix Math Functions</h2>
+<h2 id="toc-3">Matrix Math Functions</h2>
 <p>TensorFlow provides several operations that you can use to add linear algebra<br>
 functions on matrices to your graph.</p>
 <ul>
@@ -146,13 +146,13 @@ functions on matrices to your graph.</p>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/self_adjoint_eigvals"><code>tf.self_adjoint_eigvals</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/svd"><code>tf.svd</code></a></li>
 </ul>
-<h2>Tensor Math Function</h2>
+<h2 id="toc-4">Tensor Math Function</h2>
 <p>TensorFlow provides operations that you can use to add tensor functions to your<br>
 graph.</p>
 <ul>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/tensordot"><code>tf.tensordot</code></a></li>
 </ul>
-<h2>Complex Number Functions</h2>
+<h2 id="toc-5">Complex Number Functions</h2>
 <p>TensorFlow provides several operations that you can use to add complex number<br>
 functions to your graph.</p>
 <ul>
@@ -162,7 +162,7 @@ functions to your graph.</p>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/angle"><code>tf.angle</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/real"><code>tf.real</code></a></li>
 </ul>
-<h2>Reduction</h2>
+<h2 id="toc-6">Reduction</h2>
 <p>TensorFlow provides several operations that you can use to perform<br>
 common math computations that reduce various dimensions of a tensor.</p>
 <ul>
@@ -178,14 +178,14 @@ common math computations that reduce various dimensions of a tensor.</p>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/accumulate_n"><code>tf.accumulate_n</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/einsum"><code>tf.einsum</code></a></li>
 </ul>
-<h2>Scan</h2>
+<h2 id="toc-7">Scan</h2>
 <p>TensorFlow provides several operations that you can use to perform scans<br>
 (running totals) across one axis of a tensor.</p>
 <ul>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/cumsum"><code>tf.cumsum</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/cumprod"><code>tf.cumprod</code></a></li>
 </ul>
-<h2>Segmentation</h2>
+<h2 id="toc-8">Segmentation</h2>
 <p>TensorFlow provides several operations that you can use to perform common<br>
 math computations on tensor segments.<br>
 Here a segmentation is a partitioning of a tensor along<br>
@@ -212,7 +212,7 @@ tf.segment_sum(c, tf.constant([0, 0, 1]))
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/sparse_segment_mean"><code>tf.sparse_segment_mean</code></a></li>
 <li><a href="https://www.tensorflow.org/api_docs/python/tf/sparse_segment_sqrt_n"><code>tf.sparse_segment_sqrt_n</code></a></li>
 </ul>
-<h2>Sequence Comparison and Indexing</h2>
+<h2 id="toc-9">Sequence Comparison and Indexing</h2>
 <p>TensorFlow provides several operations that you can use to add sequence<br>
 comparison and index extraction to your graph. You can use these operations to<br>
 determine sequence differences and determine the indexes of specific values in<br>
@@ -228,6 +228,23 @@ a tensor.</p>
 </ul>
 
         </main>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul id="table-of-content">
+<li><a href="#toc-0">Math</a><ul>
+<li><a href="#toc-1">Arithmetic Operators</a></li>
+<li><a href="#toc-2">Basic Math Functions</a></li>
+<li><a href="#toc-3">Matrix Math Functions</a></li>
+<li><a href="#toc-4">Tensor Math Function</a></li>
+<li><a href="#toc-5">Complex Number Functions</a></li>
+<li><a href="#toc-6">Reduction</a></li>
+<li><a href="#toc-7">Scan</a></li>
+<li><a href="#toc-8">Segmentation</a></li>
+<li><a href="#toc-9">Sequence Comparison and Indexing</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
     </div>
 </div>
 <!-- Content end-->
@@ -242,7 +259,7 @@ a tensor.</p>
                     src="https://www.tensorflow.org/_static/b1fb9a8564/images/tensorflow/lockup.png" height="20"/></a>
             <a href="https://github.com/xitu/tensorflow-docs"><img
                     src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" height="20"></a>
-            <a href="https://juejin.im"><img src="//xitu.github.io/tensorflow-docs-web/assets/imgs/logo_app_white.png" height="20"/></a>
+            <a href="https://juejin.im"><img src="//tensorflow.juejin.im/assets/imgs/logo_app_white.png" height="20"/></a>
         </div>
     </div>
 </footer>
@@ -250,8 +267,13 @@ a tensor.</p>
     var contributors = [{'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
 </script>
 <!-- Footer end -->
+<div id="share-button" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Wechat,Twitter,RenRen,Facebook,GooglePlus" data-share-title="Math">
+    <img src="//tensorflow.juejin.im/assets/imgs/share.png"/>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js" type="text/javascript"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" type="text/javascript"></script>
-<script src="//xitu.github.io/tensorflow-docs-web/assets/js/main.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/jquery.slim.min.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="//tensorflow.juejin.im/assets/js/needsharebutton.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/main.js" type="text/javascript"></script>
 </html>

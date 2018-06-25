@@ -3,14 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>XLA 概述</title>
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/highlight.js.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/needsharebutton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/main.css">
 </head>
 <body>
 <!-- Header start -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TensorFlow</a>
+    <a class="navbar-brand" href="//tensorflow.juejin.im">TensorFlow</a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Menu"
             onclick="$('.collapse').toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -19,15 +21,13 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <!-- TODO: Search function-->
-        <!--<form class="form-inline my-2 my-lg-0">-->
-            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-        <!--</form>-->
+        <form class="form-inline my-2 my-lg-0 my-md-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        </form>
     </div>
 </nav>
 <script>
-    var head = [{'link': '//xitu.github.io/tensorflow-docs-web/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'name': 'About TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/community/index.html', 'name': 'Community', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
+    var head = [{'link': '//tensorflow.juejin.im/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//tensorflow.juejin.im/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//tensorflow.juejin.im/about/index.html', 'name': '关于 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//tensorflow.juejin.im/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//tensorflow.juejin.im/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//tensorflow.juejin.im/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//tensorflow.juejin.im/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//tensorflow.juejin.im/community/index.html', 'name': '社区', 'selected': 0}, {'link': '//tensorflow.juejin.im/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,13 +46,13 @@
 <div class="container-fluid">
     <div class="row">
         
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h1>XLA 概述</h1>
+        <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <h1 id="toc-0">XLA 概述</h1>
 <blockquote><p>注意： XLA 是实验性的，仍处于 alpha 版本。大部分用例都看不到性能（提高速度或减少内存使用量）上的提高。我们已经发布了 XLA，这样的话，开源社区就可以为它的开发贡献力量了，而且有助于走出一条与硬件加速器整合之路。</p>
 </blockquote>
-<p><a href="//xitu.github.io/tensorflow-docs-web/performance/xla/tfcompile.html">使用提前编译</a></p>
+<p><a href="//tensorflow.juejin.im/performance/xla/tfcompile.html">使用提前编译</a></p>
 <p>XLA 框架是实验性的，且处于活跃的开发状态。特别是，虽然已有操作的语义不太可能发生改变，但 XLA 不同，可以想见 XLA 中会不断加入更多操作，以覆盖更多重要的用例。XLA 的开发团队欢迎来自于社区的任何反馈，包括缺失的功能，以及通过 GitHub 提交的社区贡献。</p>
-<h2>我们为什么推出 XLA？</h2>
+<h2 id="toc-1">我们为什么推出 XLA？</h2>
 <p>让 TensorFlow 用上 XLA，我们追求多个目标：</p>
 <ul>
 <li><p>  <em>改进执行速度</em>： 对子图进行编译，以减少短时操作的执行时间，进而消除 TensorFlow 运行时相关的开销；融合管道化的操作以减少内存开销；针对已知张量形状优化，以支持更积极的常数传播。</p>
@@ -66,9 +66,9 @@
 <li><p>  <em>改善可移植性</em>： 为新硬件编写新的后端会相对容易一些，因为大部分 TensorFlow 程序不需要怎么修改就可以在新硬件上跑了。这和专门为新硬件定制一体化操作形成对比，因为那样做的话 TensorFlow 程序需要重写才能用这些新的操作。</p>
 </li>
 </ul>
-<h2>XLA 是如何工作的？</h2>
-<p><a href="//xitu.github.io/tensorflow-docs-web/performance/xla/operation_semantics.html">操作语义</a></p>
-<p><a href="//xitu.github.io/tensorflow-docs-web/performance/xla/developing_new_backend.html">为 XLA 开发一个新后端</a></p>
+<h2 id="toc-2">XLA 是如何工作的？</h2>
+<p><a href="//tensorflow.juejin.im/performance/xla/operation_semantics.html">操作语义</a></p>
+<p><a href="//tensorflow.juejin.im/performance/xla/developing_new_backend.html">为 XLA 开发一个新后端</a></p>
 <p>下面的流程图展示了 XLA 的编译过程：</p>
 <div style="width:95%; margin:auto; margin-bottom:10px; margin-top:20px;">
   <img src="https://www.tensorflow.org/images/how-does-xla-work.png">
@@ -76,10 +76,21 @@
 <p>在目标无关步骤之后，XLA 将 HLO 计算发送到后端。后端可以执行进一步的 HLO 级优化，这次优化会将目标特定的信息和需求考虑在内。例如，XLA GPU 后端可以对 GPU 编程模型进行具体的操作融合，并决定如何将计算划分为流。在这个阶段，后端还可能与某些操作或组合匹配从而优化库调用。</p>
 <p>下一步就是针对特定目标的代码生成了。结合了 XLA的 CPU 和 GPU 后端使用 <a href="http://llvm.org">LLVM</a> 来处理底层 IR、优化和代码生成。这些后端产生必要的 LLVM IR，用一种高效的方式来表示 XLA HLO 计算，然后调用 LLVM 从这个 LLVM IR 生成本地代码。</p>
 <p>这个 GPU 后端目前通过 LLVM NVPTX 后端来支持 NVIDIA GPU；而 CPU 后端支持多种 CPU 指令集架构（ISA）。</p>
-<h2>支持的平台</h2>
-<p><a href="//xitu.github.io/tensorflow-docs-web/performance/xla/tfcompile.html">使用提前编译</a></p>
+<h2 id="toc-3">支持的平台</h2>
+<p><a href="//tensorflow.juejin.im/performance/xla/tfcompile.html">使用提前编译</a></p>
 
         </main>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul id="table-of-content">
+<li><a href="#toc-0">XLA 概述</a><ul>
+<li><a href="#toc-1">我们为什么推出 XLA？</a></li>
+<li><a href="#toc-2">XLA 是如何工作的？</a></li>
+<li><a href="#toc-3">支持的平台</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
     </div>
 </div>
 <!-- Content end-->
@@ -94,7 +105,7 @@
                     src="https://www.tensorflow.org/_static/b1fb9a8564/images/tensorflow/lockup.png" height="20"/></a>
             <a href="https://github.com/xitu/tensorflow-docs"><img
                     src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" height="20"></a>
-            <a href="https://juejin.im"><img src="//xitu.github.io/tensorflow-docs-web/assets/imgs/logo_app_white.png" height="20"/></a>
+            <a href="https://juejin.im"><img src="//tensorflow.juejin.im/assets/imgs/logo_app_white.png" height="20"/></a>
         </div>
     </div>
 </footer>
@@ -102,8 +113,13 @@
     var contributors = [{'徐键': ''}, {'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
 </script>
 <!-- Footer end -->
+<div id="share-button" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Wechat,Twitter,RenRen,Facebook,GooglePlus" data-share-title="XLA 概述">
+    <img src="//tensorflow.juejin.im/assets/imgs/share.png"/>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js" type="text/javascript"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" type="text/javascript"></script>
-<script src="//xitu.github.io/tensorflow-docs-web/assets/js/main.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/jquery.slim.min.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="//tensorflow.juejin.im/assets/js/needsharebutton.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/main.js" type="text/javascript"></script>
 </html>

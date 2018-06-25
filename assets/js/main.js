@@ -1,9 +1,13 @@
 $(document).ready(() => {
     $('pre code').each((i, block) => {
-        hljs.highlightBlock(block);
+        try {
+            hljs.highlightBlock(block);
+        } catch (e) {
+            console.log(e)
+        }
     });
     // 如果 nav 数据存在则渲染左侧菜单
-    if (nav) {
+    if (!!window.nav) {
         nav.forEach((e, i) => {
             if (e.type === "child") {
                 $("#left-nav").html($("#left-nav").html() + firstClassChildNav(e.title, e.link))
@@ -26,6 +30,14 @@ $(document).ready(() => {
             e.outerHTML = `<div class="table-wrapper">${e.outerHTML}</div>`
         }
     })
+    new needShareButton($('#share-button')[0])
+});
+
+docsearch({
+    apiKey: '80483bd052fa7562fd902b7ef6c06497',
+    indexName: 'tensorflow',
+    inputSelector: '#search',
+    debug: true // Set debug to true if you want to inspect the dropdown
 });
 
 function contributorInfo(person) {

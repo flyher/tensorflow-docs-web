@@ -2,15 +2,17 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Attribution</title>
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//xitu.github.io/tensorflow-docs-web/assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <title>归属</title>
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/highlight.js.min.css">
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/needsharebutton.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="//tensorflow.juejin.im/assets/css/main.css">
 </head>
 <body>
 <!-- Header start -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TensorFlow</a>
+    <a class="navbar-brand" href="//tensorflow.juejin.im">TensorFlow</a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Menu"
             onclick="$('.collapse').toggle()">
         <span class="navbar-toggler-icon"></span>
@@ -19,15 +21,13 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <!-- TODO: Search function-->
-        <!--<form class="form-inline my-2 my-lg-0">-->
-            <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-        <!--</form>-->
+        <form class="form-inline my-2 my-lg-0 my-md-0">
+            <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        </form>
     </div>
 </nav>
 <script>
-    var head = [{'link': '//xitu.github.io/tensorflow-docs-web/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'name': 'About TensorFlow', 'selected': 1}, {'link': '//xitu.github.io/tensorflow-docs-web/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/community/index.html', 'name': 'Community', 'selected': 0}, {'link': '//xitu.github.io/tensorflow-docs-web/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
+    var head = [{'link': '//tensorflow.juejin.im/extend/index.html', 'name': '扩展', 'selected': 0}, {'link': '//tensorflow.juejin.im/install/index.html', 'name': '安装 TensorFlow', 'selected': 0}, {'link': '//tensorflow.juejin.im/deploy/index.html', 'name': '部署', 'selected': 0}, {'link': '//tensorflow.juejin.im/about/index.html', 'name': '关于 TensorFlow', 'selected': 1}, {'link': '//tensorflow.juejin.im/get_started/index.html', 'name': '开始', 'selected': 0}, {'link': '//tensorflow.juejin.im/mobile/index.html', 'name': '概述', 'selected': 0}, {'link': '//tensorflow.juejin.im/tutorials/index.html', 'name': '教程', 'selected': 0}, {'link': '//tensorflow.juejin.im/javascript/index.html', 'name': 'JavaScript', 'selected': 0}, {'link': '//tensorflow.juejin.im/performance/index.html', 'name': '性能', 'selected': 0}, {'link': '//tensorflow.juejin.im/community/index.html', 'name': '社区', 'selected': 0}, {'link': '//tensorflow.juejin.im/programmers_guide/index.html', 'name': '开发者指南', 'selected': 0}]
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,17 +51,16 @@
     </div>
 </nav>
 <script>
-    var nav = [{'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/about/index.html', 'title': 'About TensorFlow'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/about/uses.html', 'title': 'TensorFlow In Use'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/about/bib.html', 'title': 'TensorFlow White Papers'}, {'type': 'child', 'link': '//xitu.github.io/tensorflow-docs-web/about/attribution.html', 'title': 'Attribution'}]
+    var nav = [{'type': 'child', 'link': '//tensorflow.juejin.im/about/index.html', 'title': '关于 TensorFlow'}, {'type': 'child', 'link': '//tensorflow.juejin.im/about/uses.html', 'title': '使用 TensorFlow'}, {'type': 'child', 'link': '//tensorflow.juejin.im/about/bib.html', 'title': 'TensorFlow 白皮书'}, {'type': 'child', 'link': '//tensorflow.juejin.im/about/attribution.html', 'title': '归属'}]
 </script>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h1>Attribution</h1>
-<p>Please only use the TensorFlow name and marks when accurately referencing this<br>
-software distribution, and do not use our marks in a way that suggests you are<br>
-endorsed by or otherwise affiliated with Google. When referring to our marks,<br>
-please include the following attribution statement: "TensorFlow, the TensorFlow<br>
-logo and any related marks are trademarks of Google Inc."</p>
+        <main role="main" class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <h1 id="toc-0">归属</h1>
+<p>只有在严格遵循此软件分发约定时才能使用 TensorFlow 的名称和标志，并且不要使用我们的商标以暗示您已获得 Google 的认可或以其他方式表示隶属于 Google。当需要提及我们的商标时，请包含以下归属声明：“TensorFlow，TensorFlow 商标和任何相关标志均为 Google Inc. 的商标。”</p>
 
         </main>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+        
+        </div>
     </div>
 </div>
 <!-- Content end-->
@@ -76,16 +75,21 @@ logo and any related marks are trademarks of Google Inc."</p>
                     src="https://www.tensorflow.org/_static/b1fb9a8564/images/tensorflow/lockup.png" height="20"/></a>
             <a href="https://github.com/xitu/tensorflow-docs"><img
                     src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" height="20"></a>
-            <a href="https://juejin.im"><img src="//xitu.github.io/tensorflow-docs-web/assets/imgs/logo_app_white.png" height="20"/></a>
+            <a href="https://juejin.im"><img src="//tensorflow.juejin.im/assets/imgs/logo_app_white.png" height="20"/></a>
         </div>
     </div>
 </footer>
 <script>
-    var contributors = [{'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
+    var contributors = [{'wzasd': 'https://avatars1.githubusercontent.com/u/10248793?v=4'}, {'leviding': 'https://avatars3.githubusercontent.com/u/26959437?v=4'}]
 </script>
 <!-- Footer end -->
+<div id="share-button" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Wechat,Twitter,RenRen,Facebook,GooglePlus" data-share-title="归属">
+    <img src="//tensorflow.juejin.im/assets/imgs/share.png"/>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js" type="text/javascript"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" type="text/javascript"></script>
-<script src="//xitu.github.io/tensorflow-docs-web/assets/js/main.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/jquery.slim.min.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/highlight.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="//tensorflow.juejin.im/assets/js/needsharebutton.js" type="text/javascript"></script>
+<script src="//tensorflow.juejin.im/assets/js/main.js" type="text/javascript"></script>
 </html>
